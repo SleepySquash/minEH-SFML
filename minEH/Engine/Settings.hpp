@@ -21,19 +21,19 @@
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 
-// #include "../Essentials/ResourcePath.hpp"
+#include "../Essentials/ResourcePath.hpp"
 #ifdef _WIN32
     //#include "../Essentials/versionhelpers.h"
 #endif
-//#include "../Essentials/Base.hpp"
-//#include "NovelSomeScript.hpp"
+#include "../Essentials/Base.hpp"
+#include "NovelSomeScript.hpp"
 
 using std::cout;
 using std::endl;
 using std::pair;
 using std::make_pair;
-//using base::utf8;
-//using base::utf16;
+using base::utf8;
+using base::utf16;
 
 namespace ns
 {
@@ -65,9 +65,10 @@ namespace ns
         static int resolutionClassSetting, resolutionClass;
         static bool prefer0xRatherThatpx;
         
-        static bool isPause, pauseOnFocusLost, inGame;
+        static bool isPause, isPauseEnabled, pauseOnFocusLost, inGame;
         static bool ignoreEvent, forceIgnoreEvent, ignoreDraw;
         static bool requestWindowRefresh;
+        static float autosaveDeltaTime;
         
         static bool listenForTextInput, rememberUsername, rememberPassword;
         static std::wstring username;
@@ -80,9 +81,10 @@ namespace ns
         
         static bool isParallaxEnabled;
         static float defaultParallaxBackground, defaultParallaxFar, defaultParallaxNormal, defaultParallaxClose, defaultParallaxFrontground;
-        static float maxVolumeGlobal, maxVolumeMusic, maxVolumeAmbeint, maxVolumeSound;
+        static float maxVolumeGlobal, maxVolumeMusic, maxVolumeAmbient, maxVolumeSound;
         
-        static bool buttonHovering;
+        static bool buttonHovering, drawGUIBoundaries, forcePressInsideDialogue;
+        static bool bundleNovel;
     };
     
     typedef GlobalSettings gs;

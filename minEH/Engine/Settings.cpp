@@ -12,7 +12,7 @@ namespace ns
 {
     void GlobalSettings::Load(const std::wstring& path)
     {
-        /*std::wifstream wif;
+        std::wifstream wif;
 #ifdef _WIN32
         wif.open(base::utf16(documentsPath()) + path);
 #else
@@ -63,7 +63,7 @@ namespace ns
                 else if (nss::Command(command, L"maxVolumeAmbeint:"))
                 {
                     float integer = nss::ParseAsFloat(command);
-                    if (integer >= 0) gs::maxVolumeAmbeint = integer;
+                    if (integer >= 0) gs::maxVolumeAmbient = integer;
                 }
                 else if (nss::Command(command, L"maxVolumeSound:"))
                 {
@@ -73,11 +73,11 @@ namespace ns
             }
             
             wif.close();
-        }*/
+        }
     }
     void GlobalSettings::Save(const std::wstring& path)
     {
-        /*if (!base::FileExists(path)) base::CreateDirectory(base::utf16(documentsPath()));
+        if (!base::FileExists(path)) base::CreateDirectory(base::utf16(documentsPath()));
         
         std::wofstream wof;
 #ifdef _WIN32
@@ -89,7 +89,7 @@ namespace ns
         if (wof.is_open())
         {
             wof << " " << endl;
-        }*/
+        }
     }
     
     
@@ -104,8 +104,8 @@ namespace ns
     
     unsigned int gs::relativeWidth = 0;
     unsigned int gs::relativeHeight = 0;
-    float gs::scale = 1.f; float gs::scScale = 1.f;
-    float gs::scalex = 1.f; float gs::scaley = 1.f;
+    float gs::scale = 1.f, gs::scScale = 1.f;
+    float gs::scalex = 1.f, gs::scaley = 1.f;
     bool gs::verticalOrientation = false, gs::trueVerticalOrientation = false;
     int gs::screenOffsetTop{ 0 }, gs::notchEffectFromTop{ 0 };
     bool gs::fullscreen{ false };
@@ -120,8 +120,8 @@ namespace ns
 #endif
     
     bool gs::isVerticalSyncEnabled = true;
-    int gs::framerateLimit = 60;
-    int gs::framerateNoFocus = 60;
+    int gs::framerateLimit = 0;
+    int gs::framerateNoFocus = 10;
     
     bool gs::isResolutionClassEnabled = true;
     int gs::resolutionClassSetting = -1;
@@ -129,11 +129,13 @@ namespace ns
     bool gs::prefer0xRatherThatpx = false;
     
     bool gs::isPause = false;
+    bool gs::isPauseEnabled = true;
     bool gs::pauseOnFocusLost = true;
     bool gs::inGame = false;
     bool gs::ignoreEvent = false, gs::forceIgnoreEvent = false, gs::ignoreDraw = false;
     bool gs::requestWindowRefresh = true;
-    
+    float gs::autosaveDeltaTime = 240.f;
+
     bool gs::listenForTextInput{ false }, gs::rememberUsername{ true }, gs::rememberPassword{ false };
     std::wstring gs::username; std::string gs::password;
     
@@ -142,17 +144,10 @@ namespace ns
     void gs::RemoveInterface(void* address) { activeInterfaces.erase(std::remove(activeInterfaces.begin(), activeInterfaces.end(), address), activeInterfaces.end()); ignoreEvent = !activeInterfaces.empty(); }
     bool gs::isActiveInterface(void* address) { if (!address) return activeInterfaces.empty(); else return (activeInterfaces.back() == address); }
     
-    float gs::maxVolumeGlobal = 1.f;
-    float gs::maxVolumeMusic = 1.f;
-    float gs::maxVolumeAmbeint = 1.f;
-    float gs::maxVolumeSound = 1.f;
+    float gs::maxVolumeGlobal = 1.f, gs::maxVolumeMusic = 1.f, gs::maxVolumeAmbient = 1.f, gs::maxVolumeSound = 1.f;
     
-    bool gs::isParallaxEnabled = false;
-    float gs::defaultParallaxBackground = 0.018;
-    float gs::defaultParallaxFar = 0.032;
-    float gs::defaultParallaxNormal = 0.062;
-    float gs::defaultParallaxClose = 0.105;
-    float gs::defaultParallaxFrontground = 0.13;
+    bool gs::isParallaxEnabled = true;
+    float gs::defaultParallaxBackground = 0.018, gs::defaultParallaxFar = 0.032, gs::defaultParallaxNormal = 0.062, gs::defaultParallaxClose = 0.105, gs::defaultParallaxFrontground = 0.13;
     
-    bool gs::buttonHovering = true;
+    bool gs::buttonHovering = true, gs::drawGUIBoundaries = false, gs::forcePressInsideDialogue = true;
 }

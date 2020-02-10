@@ -1,13 +1,13 @@
 //
-//  EntityComposition.hpp
-//  minEH
+//  EntitySystem.hpp
+//  NovelSome
 //
 //  Created by Никита Исаенко on 26/08/2018.
 //  Copyright © 2018 Melancholy Hill. All rights reserved.
 //
 
-#ifndef EntityComposition_hpp
-#define EntityComposition_hpp
+#ifndef EntitySystem_hpp
+#define EntitySystem_hpp
 
 #include <iostream>
 #include <list>
@@ -37,9 +37,9 @@ namespace ns
         virtual void Init();
         virtual void Update(const sf::Time&);
         virtual void Draw(sf::RenderWindow*);
-        virtual void Resize(unsigned int width, unsigned int height);
+        virtual void Resize(const unsigned int& width, const unsigned int& height);
         virtual void PollEvent(sf::Event& event);
-        virtual void RecieveMessage(MessageHolder& message);
+        virtual void ReceiveMessage(MessageHolder& message);
         virtual void Destroy();
         void SendMessage(MessageHolder message) override;
         void SetPriority(int priority);
@@ -57,11 +57,11 @@ namespace ns
         Entity(EntitySystem* system);
         void Update(const sf::Time& elapsedTime);
         void Draw(sf::RenderWindow* window);
-        void Resize(unsigned int width, unsigned int height);
+        void Resize(const unsigned int& width, const unsigned int& height);
         void PollEvent(sf::Event& event);
         void PopComponent(Component* component);
         void SendMessage(MessageHolder message);
-        void RecieveMessage(MessageHolder& message);
+        void ReceiveMessage(MessageHolder& message);
         void Destroy();
         void SetEntitySystem(EntitySystem* system);
         void SortAbove(Component* component);
@@ -117,7 +117,7 @@ namespace ns
         EntitySystem();
         void Update(const sf::Time& elapsedTime);
         void Draw(sf::RenderWindow* window);
-        void Resize(unsigned int width, unsigned int height);
+        void Resize(const unsigned int& width, const unsigned int& height);
         void PollEvent(sf::Event& event);
         Entity* AddEntity();
         void PopEntity(Entity* entity);
@@ -126,4 +126,4 @@ namespace ns
     };
 }
 
-#endif /* EntityComposition_hpp */
+#endif /* EntitySystem_hpp */

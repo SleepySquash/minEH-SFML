@@ -1,12 +1,12 @@
 //
-//  EntityComposition.cpp
-//  minEH
+//  EntitySystem.cpp
+//  NovelSome
 //
-//  Created by Никита Исаенко on 08.02.2020.
-//  Copyright © 2020 Melancholy Hill. All rights reserved.
+//  Created by Никита Исаенко on 26/08/2018.
+//  Copyright © 2018 Melancholy Hill. All rights reserved.
 //
 
-#include "EntityComposition.hpp"
+#include "EntitySystem.hpp"
 
 namespace ns
 {
@@ -14,11 +14,11 @@ namespace ns
     void Component::Init() { }
     void Component::Update(const sf::Time&) { }
     void Component::Draw(sf::RenderWindow*) { }
-    void Component::Resize(unsigned int, unsigned int) { }
+    void Component::Resize(const unsigned int&, const unsigned int&) { }
     void Component::PollEvent(sf::Event&) { }
-    void Component::RecieveMessage(MessageHolder&) { }
+    void Component::ReceiveMessage(MessageHolder&) { }
     void Component::Destroy() { }
-    void Component::SendMessage(MessageHolder message) { RecieveMessage(message); }
+    void Component::SendMessage(MessageHolder message) { ReceiveMessage(message); }
     void Component::SetEntity(Entity* entity) { this->entity = entity; }
     Entity* Component::GetEntity() { return entity; }
     void Component::SetPriority(int priority) { this->priority = priority; }
@@ -41,7 +41,7 @@ namespace ns
             for (auto c : components)
                 if (!c->offline) c->Draw(window);
     }
-    void Entity::Resize(unsigned int width, unsigned int height)
+    void Entity::Resize(const unsigned int& width, const unsigned int& height)
     {
         if (components.size())
             for (auto c : components)
@@ -70,8 +70,8 @@ namespace ns
         list<Component*>::iterator it = components.begin();
         while (it != components.end()) { (*it)->Destroy(); delete (*it); it = components.erase(it); }
     }
-    void Entity::SendMessage(MessageHolder message) { Entity::RecieveMessage(message); }
-    void Entity::RecieveMessage(MessageHolder& message)
+    void Entity::SendMessage(MessageHolder message) { Entity::ReceiveMessage(message); }
+    void Entity::ReceiveMessage(MessageHolder& message)
     {
         if (components.size())
         {
@@ -79,7 +79,7 @@ namespace ns
             for (auto e = components.begin(); e != components.end(); e = next)
             {
                 next = e; std::advance(next, 1);
-                if (!(*e)->offline) (*e)->RecieveMessage(message);
+                if (!(*e)->offline) (*e)->ReceiveMessage(message);
             }
         }
     }
@@ -112,7 +112,7 @@ namespace ns
             for (auto e : entities)
                 if (!e->offline) e->Draw(window);
     }
-    void EntitySystem::Resize(unsigned int width, unsigned int height)
+    void EntitySystem::Resize(const unsigned int& width, const unsigned int& height)
     {
         if (entities.size())
             for (auto e : entities)
@@ -146,7 +146,7 @@ namespace ns
     {
         if (entities.size())
             for (auto e : entities)
-                if (!e->offline) e->RecieveMessage(message);
+                if (!e->offline) e->ReceiveMessage(message);
     }
     void EntitySystem::clear()
     {

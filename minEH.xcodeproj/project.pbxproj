@@ -7,46 +7,193 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD15CCD423F1DD2A00CC40C2 /* minEH.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD15CCD123F1DD2A00CC40C2 /* minEH.hpp */; };
+		DD15CCFA23F1E81600CC40C2 /* TextField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD15CCF823F1E81600CC40C2 /* TextField.cpp */; };
+		DD15CCFB23F1E81600CC40C2 /* TextField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD15CCF823F1E81600CC40C2 /* TextField.cpp */; };
+		DD15CCFC23F1E81600CC40C2 /* TextField.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD15CCF923F1E81600CC40C2 /* TextField.hpp */; };
+		DD15CD0023F1E85D00CC40C2 /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD15CCFE23F1E85D00CC40C2 /* Client.cpp */; };
+		DD15CD0123F1E85D00CC40C2 /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD15CCFE23F1E85D00CC40C2 /* Client.cpp */; };
+		DD15CD0223F1E85D00CC40C2 /* Client.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD15CCFF23F1E85D00CC40C2 /* Client.hpp */; };
+		DD189A6223F1CA5D00D81302 /* Base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D6B23EF459800A4B734 /* Base.cpp */; };
+		DD189A6323F1CA6200D81302 /* etc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715CF723EF44C800A4B734 /* etc.cpp */; };
+		DD189A6423F1CA6500D81302 /* Font.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715CF623EF44C800A4B734 /* Font.cpp */; };
+		DD189A6523F1CA6600D81302 /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715CF523EF44C800A4B734 /* Image.cpp */; };
+		DD189A6623F1CA6800D81302 /* Sound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715CFC23EF44C800A4B734 /* Sound.cpp */; };
+		DD189A6723F1CA6900D81302 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715CF923EF44C800A4B734 /* Shader.cpp */; };
+		DD189A6823F1CA6F00D81302 /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D0723EF44C800A4B734 /* Button.cpp */; };
+		DD189A6A23F1CA7500D81302 /* SomeButtons.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D0B23EF44C800A4B734 /* SomeButtons.cpp */; };
+		DD189A6B23F1CA8800D81302 /* RoundedRectangleButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D0A23EF44C800A4B734 /* RoundedRectangleButton.cpp */; };
+		DD189A6C23F1CA8A00D81302 /* TexturedRectangleButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D0D23EF44C800A4B734 /* TexturedRectangleButton.cpp */; };
+		DD189A6D23F1CA8B00D81302 /* RoundedRectangleShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D0123EF44C800A4B734 /* RoundedRectangleShape.cpp */; };
+		DD189A6E23F1CA8C00D81302 /* Blur.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D0323EF44C800A4B734 /* Blur.cpp */; };
+		DD189A6F23F1CA9300D81302 /* NovelSomeScript.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D3C23EF453A00A4B734 /* NovelSomeScript.cpp */; };
+		DD189A7023F1CA9500D81302 /* Settings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715C8323EEC73900A4B734 /* Settings.cpp */; };
+		DD189A7123F1CA9600D81302 /* MessageHolder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715CA823EECC4100A4B734 /* MessageHolder.cpp */; };
+		DD189A7223F1CA9700D81302 /* EntitySystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715C6F23EEC65600A4B734 /* EntitySystem.cpp */; };
+		DD189A7323F1CA9800D81302 /* NovelSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D4623EF453B00A4B734 /* NovelSystem.cpp */; };
+		DD189A7423F1CA9A00D81302 /* Initialization.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D4723EF453B00A4B734 /* Initialization.cpp */; };
+		DD189A7523F1CA9C00D81302 /* Language.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D4523EF453B00A4B734 /* Language.cpp */; };
+		DD189A7623F1CA9D00D81302 /* NotificationHolder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D3E23EF453B00A4B734 /* NotificationHolder.cpp */; };
+		DD189A7723F1CA9E00D81302 /* Notifications.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D4923EF453B00A4B734 /* Notifications.cpp */; };
+		DD189A7823F1CAA200D81302 /* EssentialComponents.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D7423EF459900A4B734 /* EssentialComponents.cpp */; };
+		DD189A7923F1CAA300D81302 /* LanguageLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D7323EF459900A4B734 /* LanguageLibrary.cpp */; };
+		DD189A7A23F1CAA400D81302 /* Vasya.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D7823EF459900A4B734 /* Vasya.cpp */; };
+		DD189A7B23F1CAA500D81302 /* BlurTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D7923EF459900A4B734 /* BlurTest.cpp */; };
+		DD189A7C23F1CC7500D81302 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = DD715D6E23EF459800A4B734 /* ResourcePath.mm */; };
 		DD715C6923EEC5BA00A4B734 /* minEH.h in Headers */ = {isa = PBXBuildFile; fileRef = DD715C6723EEC5BA00A4B734 /* minEH.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD715C7123EEC65600A4B734 /* EntityComposition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715C6F23EEC65600A4B734 /* EntityComposition.cpp */; };
-		DD715C7223EEC65600A4B734 /* EntityComposition.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715C7023EEC65600A4B734 /* EntityComposition.hpp */; };
-		DD715C7C23EEC69000A4B734 /* minEH_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = DD715C7A23EEC69000A4B734 /* minEH_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD715C8123EEC6AD00A4B734 /* EntityComposition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715C6F23EEC65600A4B734 /* EntityComposition.cpp */; };
-		DD715C8223EEC6B600A4B734 /* EntityComposition.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715C7023EEC65600A4B734 /* EntityComposition.hpp */; };
+		DD715C7123EEC65600A4B734 /* EntitySystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715C6F23EEC65600A4B734 /* EntitySystem.cpp */; };
+		DD715C7223EEC65600A4B734 /* EntitySystem.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715C7023EEC65600A4B734 /* EntitySystem.hpp */; };
 		DD715C8523EEC73900A4B734 /* Settings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715C8323EEC73900A4B734 /* Settings.cpp */; };
-		DD715C8623EEC73900A4B734 /* Settings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715C8323EEC73900A4B734 /* Settings.cpp */; };
 		DD715C8723EEC73900A4B734 /* Settings.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715C8423EEC73900A4B734 /* Settings.hpp */; };
-		DD715C8823EEC73900A4B734 /* Settings.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715C8423EEC73900A4B734 /* Settings.hpp */; };
 		DD715CAA23EECC4100A4B734 /* MessageHolder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715CA823EECC4100A4B734 /* MessageHolder.cpp */; };
-		DD715CAB23EECC4100A4B734 /* MessageHolder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715CA823EECC4100A4B734 /* MessageHolder.cpp */; };
 		DD715CAC23EECC4100A4B734 /* MessageHolder.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715CA923EECC4100A4B734 /* MessageHolder.hpp */; };
-		DD715CAD23EECC4100A4B734 /* MessageHolder.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715CA923EECC4100A4B734 /* MessageHolder.hpp */; };
+		DD715D0E23EF44C800A4B734 /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715CF523EF44C800A4B734 /* Image.cpp */; };
+		DD715D1023EF44C800A4B734 /* Font.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715CF623EF44C800A4B734 /* Font.cpp */; };
+		DD715D1223EF44C800A4B734 /* etc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715CF723EF44C800A4B734 /* etc.cpp */; };
+		DD715D1423EF44C800A4B734 /* Sound.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715CF823EF44C800A4B734 /* Sound.hpp */; };
+		DD715D1623EF44C800A4B734 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715CF923EF44C800A4B734 /* Shader.cpp */; };
+		DD715D1823EF44C800A4B734 /* Font.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715CFA23EF44C800A4B734 /* Font.hpp */; };
+		DD715D1A23EF44C800A4B734 /* etc.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715CFB23EF44C800A4B734 /* etc.hpp */; };
+		DD715D1C23EF44C800A4B734 /* Sound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715CFC23EF44C800A4B734 /* Sound.cpp */; };
+		DD715D1E23EF44C800A4B734 /* Shader.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715CFD23EF44C800A4B734 /* Shader.hpp */; };
+		DD715D2023EF44C800A4B734 /* Image.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715CFE23EF44C800A4B734 /* Image.hpp */; };
+		DD715D2223EF44C800A4B734 /* Blur.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715D0023EF44C800A4B734 /* Blur.hpp */; };
+		DD715D2423EF44C800A4B734 /* RoundedRectangleShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D0123EF44C800A4B734 /* RoundedRectangleShape.cpp */; };
+		DD715D2623EF44C800A4B734 /* enums.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715D0223EF44C800A4B734 /* enums.hpp */; };
+		DD715D2823EF44C800A4B734 /* Blur.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D0323EF44C800A4B734 /* Blur.cpp */; };
+		DD715D2A23EF44C800A4B734 /* RoundedRectangleShape.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715D0423EF44C800A4B734 /* RoundedRectangleShape.hpp */; };
+		DD715D2C23EF44C800A4B734 /* SomeButtons.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715D0623EF44C800A4B734 /* SomeButtons.hpp */; };
+		DD715D2E23EF44C800A4B734 /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D0723EF44C800A4B734 /* Button.cpp */; };
+		DD715D3023EF44C800A4B734 /* TexturedRectangleButton.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715D0823EF44C800A4B734 /* TexturedRectangleButton.hpp */; };
+		DD715D3223EF44C800A4B734 /* RoundedRectangleButton.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715D0923EF44C800A4B734 /* RoundedRectangleButton.hpp */; };
+		DD715D3423EF44C800A4B734 /* RoundedRectangleButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D0A23EF44C800A4B734 /* RoundedRectangleButton.cpp */; };
+		DD715D3623EF44C800A4B734 /* SomeButtons.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D0B23EF44C800A4B734 /* SomeButtons.cpp */; };
+		DD715D3823EF44C800A4B734 /* Button.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715D0C23EF44C800A4B734 /* Button.hpp */; };
+		DD715D3A23EF44C800A4B734 /* TexturedRectangleButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D0D23EF44C800A4B734 /* TexturedRectangleButton.cpp */; };
+		DD715D4B23EF453B00A4B734 /* NovelSomeScript.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D3C23EF453A00A4B734 /* NovelSomeScript.cpp */; };
+		DD715D4D23EF453B00A4B734 /* Notifications.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715D3D23EF453A00A4B734 /* Notifications.hpp */; };
+		DD715D4F23EF453B00A4B734 /* NotificationHolder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D3E23EF453B00A4B734 /* NotificationHolder.cpp */; };
+		DD715D5123EF453B00A4B734 /* GUI.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715D3F23EF453B00A4B734 /* GUI.hpp */; };
+		DD715D5323EF453B00A4B734 /* NovelSomeScript.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715D4023EF453B00A4B734 /* NovelSomeScript.hpp */; };
+		DD715D5523EF453B00A4B734 /* Language.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715D4123EF453B00A4B734 /* Language.hpp */; };
+		DD715D5723EF453B00A4B734 /* List.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715D4223EF453B00A4B734 /* List.hpp */; };
+		DD715D5923EF453B00A4B734 /* Initialization.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715D4323EF453B00A4B734 /* Initialization.hpp */; };
+		DD715D5B23EF453B00A4B734 /* Collectors.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715D4423EF453B00A4B734 /* Collectors.hpp */; };
+		DD715D5D23EF453B00A4B734 /* Language.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D4523EF453B00A4B734 /* Language.cpp */; };
+		DD715D5F23EF453B00A4B734 /* NovelSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D4623EF453B00A4B734 /* NovelSystem.cpp */; };
+		DD715D6123EF453B00A4B734 /* Initialization.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D4723EF453B00A4B734 /* Initialization.cpp */; };
+		DD715D6323EF453B00A4B734 /* NovelSystem.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715D4823EF453B00A4B734 /* NovelSystem.hpp */; };
+		DD715D6523EF453B00A4B734 /* Notifications.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D4923EF453B00A4B734 /* Notifications.cpp */; };
+		DD715D6723EF453B00A4B734 /* NotificationHolder.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715D4A23EF453B00A4B734 /* NotificationHolder.hpp */; };
+		DD715D7B23EF459900A4B734 /* ResourcePath.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715D6A23EF459800A4B734 /* ResourcePath.hpp */; };
+		DD715D7D23EF459900A4B734 /* Base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D6B23EF459800A4B734 /* Base.cpp */; };
+		DD715D7F23EF459900A4B734 /* ResourcePath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D6C23EF459800A4B734 /* ResourcePath.cpp */; };
+		DD715D8123EF459900A4B734 /* Base.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715D6D23EF459800A4B734 /* Base.hpp */; };
+		DD715D8323EF459900A4B734 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = DD715D6E23EF459800A4B734 /* ResourcePath.mm */; };
+		DD715D8523EF459900A4B734 /* LanguageLibrary.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715D7123EF459900A4B734 /* LanguageLibrary.hpp */; };
+		DD715D8723EF459900A4B734 /* EssentialComponents.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715D7223EF459900A4B734 /* EssentialComponents.hpp */; };
+		DD715D8923EF459900A4B734 /* LanguageLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D7323EF459900A4B734 /* LanguageLibrary.cpp */; };
+		DD715D8B23EF459900A4B734 /* EssentialComponents.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D7423EF459900A4B734 /* EssentialComponents.cpp */; };
+		DD715D8D23EF459900A4B734 /* BlurTest.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715D7623EF459900A4B734 /* BlurTest.hpp */; };
+		DD715D8F23EF459900A4B734 /* Vasya.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715D7723EF459900A4B734 /* Vasya.hpp */; };
+		DD715D9123EF459900A4B734 /* Vasya.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D7823EF459900A4B734 /* Vasya.cpp */; };
+		DD715D9323EF459900A4B734 /* BlurTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D7923EF459900A4B734 /* BlurTest.cpp */; };
+		DD715D9523EF459900A4B734 /* GAME228.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD715D7A23EF459900A4B734 /* GAME228.hpp */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DD189A5623F1C93F00D81302 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		DD15CCD123F1DD2A00CC40C2 /* minEH.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = minEH.hpp; sourceTree = "<group>"; };
+		DD15CCF823F1E81600CC40C2 /* TextField.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TextField.cpp; sourceTree = "<group>"; };
+		DD15CCF923F1E81600CC40C2 /* TextField.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TextField.hpp; sourceTree = "<group>"; };
+		DD15CCFE23F1E85D00CC40C2 /* Client.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Client.cpp; sourceTree = "<group>"; };
+		DD15CCFF23F1E85D00CC40C2 /* Client.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Client.hpp; sourceTree = "<group>"; };
+		DD189A5823F1C93F00D81302 /* libminEH.iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libminEH.iOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD715C6423EEC5BA00A4B734 /* minEH.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = minEH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD715C6723EEC5BA00A4B734 /* minEH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = minEH.h; sourceTree = "<group>"; };
 		DD715C6823EEC5BA00A4B734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DD715C6F23EEC65600A4B734 /* EntityComposition.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EntityComposition.cpp; sourceTree = "<group>"; };
-		DD715C7023EEC65600A4B734 /* EntityComposition.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = EntityComposition.hpp; sourceTree = "<group>"; };
-		DD715C7823EEC69000A4B734 /* minEH_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = minEH_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD715C6F23EEC65600A4B734 /* EntitySystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EntitySystem.cpp; sourceTree = "<group>"; };
+		DD715C7023EEC65600A4B734 /* EntitySystem.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = EntitySystem.hpp; sourceTree = "<group>"; };
 		DD715C7A23EEC69000A4B734 /* minEH_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = minEH_iOS.h; sourceTree = "<group>"; };
 		DD715C7B23EEC69000A4B734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD715C8323EEC73900A4B734 /* Settings.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Settings.cpp; sourceTree = "<group>"; };
 		DD715C8423EEC73900A4B734 /* Settings.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Settings.hpp; sourceTree = "<group>"; };
 		DD715CA823EECC4100A4B734 /* MessageHolder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MessageHolder.cpp; sourceTree = "<group>"; };
 		DD715CA923EECC4100A4B734 /* MessageHolder.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MessageHolder.hpp; sourceTree = "<group>"; };
+		DD715CF523EF44C800A4B734 /* Image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Image.cpp; sourceTree = "<group>"; };
+		DD715CF623EF44C800A4B734 /* Font.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Font.cpp; sourceTree = "<group>"; };
+		DD715CF723EF44C800A4B734 /* etc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = etc.cpp; sourceTree = "<group>"; };
+		DD715CF823EF44C800A4B734 /* Sound.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Sound.hpp; sourceTree = "<group>"; };
+		DD715CF923EF44C800A4B734 /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
+		DD715CFA23EF44C800A4B734 /* Font.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Font.hpp; sourceTree = "<group>"; };
+		DD715CFB23EF44C800A4B734 /* etc.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = etc.hpp; sourceTree = "<group>"; };
+		DD715CFC23EF44C800A4B734 /* Sound.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sound.cpp; sourceTree = "<group>"; };
+		DD715CFD23EF44C800A4B734 /* Shader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Shader.hpp; sourceTree = "<group>"; };
+		DD715CFE23EF44C800A4B734 /* Image.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Image.hpp; sourceTree = "<group>"; };
+		DD715D0023EF44C800A4B734 /* Blur.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Blur.hpp; sourceTree = "<group>"; };
+		DD715D0123EF44C800A4B734 /* RoundedRectangleShape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RoundedRectangleShape.cpp; sourceTree = "<group>"; };
+		DD715D0223EF44C800A4B734 /* enums.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = enums.hpp; sourceTree = "<group>"; };
+		DD715D0323EF44C800A4B734 /* Blur.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Blur.cpp; sourceTree = "<group>"; };
+		DD715D0423EF44C800A4B734 /* RoundedRectangleShape.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RoundedRectangleShape.hpp; sourceTree = "<group>"; };
+		DD715D0623EF44C800A4B734 /* SomeButtons.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SomeButtons.hpp; sourceTree = "<group>"; };
+		DD715D0723EF44C800A4B734 /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Button.cpp; sourceTree = "<group>"; };
+		DD715D0823EF44C800A4B734 /* TexturedRectangleButton.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TexturedRectangleButton.hpp; sourceTree = "<group>"; };
+		DD715D0923EF44C800A4B734 /* RoundedRectangleButton.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RoundedRectangleButton.hpp; sourceTree = "<group>"; };
+		DD715D0A23EF44C800A4B734 /* RoundedRectangleButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RoundedRectangleButton.cpp; sourceTree = "<group>"; };
+		DD715D0B23EF44C800A4B734 /* SomeButtons.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SomeButtons.cpp; sourceTree = "<group>"; };
+		DD715D0C23EF44C800A4B734 /* Button.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Button.hpp; sourceTree = "<group>"; };
+		DD715D0D23EF44C800A4B734 /* TexturedRectangleButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TexturedRectangleButton.cpp; sourceTree = "<group>"; };
+		DD715D3C23EF453A00A4B734 /* NovelSomeScript.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NovelSomeScript.cpp; sourceTree = "<group>"; };
+		DD715D3D23EF453A00A4B734 /* Notifications.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Notifications.hpp; sourceTree = "<group>"; };
+		DD715D3E23EF453B00A4B734 /* NotificationHolder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NotificationHolder.cpp; sourceTree = "<group>"; };
+		DD715D3F23EF453B00A4B734 /* GUI.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GUI.hpp; sourceTree = "<group>"; };
+		DD715D4023EF453B00A4B734 /* NovelSomeScript.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NovelSomeScript.hpp; sourceTree = "<group>"; };
+		DD715D4123EF453B00A4B734 /* Language.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Language.hpp; sourceTree = "<group>"; };
+		DD715D4223EF453B00A4B734 /* List.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = List.hpp; sourceTree = "<group>"; };
+		DD715D4323EF453B00A4B734 /* Initialization.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Initialization.hpp; sourceTree = "<group>"; };
+		DD715D4423EF453B00A4B734 /* Collectors.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Collectors.hpp; sourceTree = "<group>"; };
+		DD715D4523EF453B00A4B734 /* Language.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Language.cpp; sourceTree = "<group>"; };
+		DD715D4623EF453B00A4B734 /* NovelSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NovelSystem.cpp; sourceTree = "<group>"; };
+		DD715D4723EF453B00A4B734 /* Initialization.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Initialization.cpp; sourceTree = "<group>"; };
+		DD715D4823EF453B00A4B734 /* NovelSystem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NovelSystem.hpp; sourceTree = "<group>"; };
+		DD715D4923EF453B00A4B734 /* Notifications.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Notifications.cpp; sourceTree = "<group>"; };
+		DD715D4A23EF453B00A4B734 /* NotificationHolder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NotificationHolder.hpp; sourceTree = "<group>"; };
+		DD715D6A23EF459800A4B734 /* ResourcePath.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
+		DD715D6B23EF459800A4B734 /* Base.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Base.cpp; sourceTree = "<group>"; };
+		DD715D6C23EF459800A4B734 /* ResourcePath.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourcePath.cpp; sourceTree = "<group>"; };
+		DD715D6D23EF459800A4B734 /* Base.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Base.hpp; sourceTree = "<group>"; };
+		DD715D6E23EF459800A4B734 /* ResourcePath.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
+		DD715D7123EF459900A4B734 /* LanguageLibrary.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LanguageLibrary.hpp; sourceTree = "<group>"; };
+		DD715D7223EF459900A4B734 /* EssentialComponents.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EssentialComponents.hpp; sourceTree = "<group>"; };
+		DD715D7323EF459900A4B734 /* LanguageLibrary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LanguageLibrary.cpp; sourceTree = "<group>"; };
+		DD715D7423EF459900A4B734 /* EssentialComponents.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EssentialComponents.cpp; sourceTree = "<group>"; };
+		DD715D7623EF459900A4B734 /* BlurTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BlurTest.hpp; sourceTree = "<group>"; };
+		DD715D7723EF459900A4B734 /* Vasya.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vasya.hpp; sourceTree = "<group>"; };
+		DD715D7823EF459900A4B734 /* Vasya.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vasya.cpp; sourceTree = "<group>"; };
+		DD715D7923EF459900A4B734 /* BlurTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BlurTest.cpp; sourceTree = "<group>"; };
+		DD715D7A23EF459900A4B734 /* GAME228.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GAME228.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DD715C6123EEC5BA00A4B734 /* Frameworks */ = {
+		DD189A5523F1C93F00D81302 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DD715C7523EEC69000A4B734 /* Frameworks */ = {
+		DD715C6123EEC5BA00A4B734 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -62,6 +209,7 @@
 				DD715C6623EEC5BA00A4B734 /* minEH */,
 				DD715C7923EEC69000A4B734 /* minEH.iOS */,
 				DD715C6523EEC5BA00A4B734 /* Products */,
+				DDB2A25623EF5C2E0050B8D9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,7 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				DD715C6423EEC5BA00A4B734 /* minEH.framework */,
-				DD715C7823EEC69000A4B734 /* minEH_iOS.framework */,
+				DD189A5823F1C93F00D81302 /* libminEH.iOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,8 +226,11 @@
 			isa = PBXGroup;
 			children = (
 				DD715C6823EEC5BA00A4B734 /* Info.plist */,
-				DD715C8023EEC69D00A4B734 /* Engine */,
 				DD715C6723EEC5BA00A4B734 /* minEH.h */,
+				DD15CCD123F1DD2A00CC40C2 /* minEH.hpp */,
+				DD715D6923EF459800A4B734 /* Essentials */,
+				DD715C8023EEC69D00A4B734 /* Engine */,
+				DD715D6F23EF459900A4B734 /* Components */,
 			);
 			path = minEH;
 			sourceTree = "<group>";
@@ -96,14 +247,131 @@
 		DD715C8023EEC69D00A4B734 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
-				DD715C6F23EEC65600A4B734 /* EntityComposition.cpp */,
-				DD715C7023EEC65600A4B734 /* EntityComposition.hpp */,
+				DD715CF423EF44C800A4B734 /* Collectors */,
+				DD715D4423EF453B00A4B734 /* Collectors.hpp */,
+				DD715CFF23EF44C800A4B734 /* GUI */,
+				DD715D3F23EF453B00A4B734 /* GUI.hpp */,
+				DD715D3C23EF453A00A4B734 /* NovelSomeScript.cpp */,
+				DD715D4023EF453B00A4B734 /* NovelSomeScript.hpp */,
 				DD715C8323EEC73900A4B734 /* Settings.cpp */,
 				DD715C8423EEC73900A4B734 /* Settings.hpp */,
 				DD715CA823EECC4100A4B734 /* MessageHolder.cpp */,
 				DD715CA923EECC4100A4B734 /* MessageHolder.hpp */,
+				DD715C6F23EEC65600A4B734 /* EntitySystem.cpp */,
+				DD715C7023EEC65600A4B734 /* EntitySystem.hpp */,
+				DD715D4623EF453B00A4B734 /* NovelSystem.cpp */,
+				DD715D4823EF453B00A4B734 /* NovelSystem.hpp */,
+				DD715D4723EF453B00A4B734 /* Initialization.cpp */,
+				DD715D4323EF453B00A4B734 /* Initialization.hpp */,
+				DD715D4223EF453B00A4B734 /* List.hpp */,
+				DD715D4523EF453B00A4B734 /* Language.cpp */,
+				DD715D4123EF453B00A4B734 /* Language.hpp */,
+				DD15CCFE23F1E85D00CC40C2 /* Client.cpp */,
+				DD15CCFF23F1E85D00CC40C2 /* Client.hpp */,
+				DD715D3E23EF453B00A4B734 /* NotificationHolder.cpp */,
+				DD715D4A23EF453B00A4B734 /* NotificationHolder.hpp */,
+				DD715D4923EF453B00A4B734 /* Notifications.cpp */,
+				DD715D3D23EF453A00A4B734 /* Notifications.hpp */,
 			);
 			path = Engine;
+			sourceTree = "<group>";
+		};
+		DD715CF423EF44C800A4B734 /* Collectors */ = {
+			isa = PBXGroup;
+			children = (
+				DD715CF723EF44C800A4B734 /* etc.cpp */,
+				DD715CFB23EF44C800A4B734 /* etc.hpp */,
+				DD715CF623EF44C800A4B734 /* Font.cpp */,
+				DD715CFA23EF44C800A4B734 /* Font.hpp */,
+				DD715CF523EF44C800A4B734 /* Image.cpp */,
+				DD715CFE23EF44C800A4B734 /* Image.hpp */,
+				DD715CFC23EF44C800A4B734 /* Sound.cpp */,
+				DD715CF823EF44C800A4B734 /* Sound.hpp */,
+				DD715CF923EF44C800A4B734 /* Shader.cpp */,
+				DD715CFD23EF44C800A4B734 /* Shader.hpp */,
+			);
+			path = Collectors;
+			sourceTree = "<group>";
+		};
+		DD715CFF23EF44C800A4B734 /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				DD715D0523EF44C800A4B734 /* Button */,
+				DD715D0223EF44C800A4B734 /* enums.hpp */,
+				DD715D0123EF44C800A4B734 /* RoundedRectangleShape.cpp */,
+				DD715D0423EF44C800A4B734 /* RoundedRectangleShape.hpp */,
+				DD715D0323EF44C800A4B734 /* Blur.cpp */,
+				DD715D0023EF44C800A4B734 /* Blur.hpp */,
+				DD15CCF823F1E81600CC40C2 /* TextField.cpp */,
+				DD15CCF923F1E81600CC40C2 /* TextField.hpp */,
+			);
+			path = GUI;
+			sourceTree = "<group>";
+		};
+		DD715D0523EF44C800A4B734 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				DD715D0723EF44C800A4B734 /* Button.cpp */,
+				DD715D0C23EF44C800A4B734 /* Button.hpp */,
+				DD715D0B23EF44C800A4B734 /* SomeButtons.cpp */,
+				DD715D0623EF44C800A4B734 /* SomeButtons.hpp */,
+				DD715D0A23EF44C800A4B734 /* RoundedRectangleButton.cpp */,
+				DD715D0923EF44C800A4B734 /* RoundedRectangleButton.hpp */,
+				DD715D0D23EF44C800A4B734 /* TexturedRectangleButton.cpp */,
+				DD715D0823EF44C800A4B734 /* TexturedRectangleButton.hpp */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		DD715D6923EF459800A4B734 /* Essentials */ = {
+			isa = PBXGroup;
+			children = (
+				DD715D6A23EF459800A4B734 /* ResourcePath.hpp */,
+				DD715D6C23EF459800A4B734 /* ResourcePath.cpp */,
+				DD715D6E23EF459800A4B734 /* ResourcePath.mm */,
+				DD715D6B23EF459800A4B734 /* Base.cpp */,
+				DD715D6D23EF459800A4B734 /* Base.hpp */,
+			);
+			path = Essentials;
+			sourceTree = "<group>";
+		};
+		DD715D6F23EF459900A4B734 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DD715D7023EF459900A4B734 /* Helpers */,
+				DD715D7523EF459900A4B734 /* TestComponents */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		DD715D7023EF459900A4B734 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DD715D7423EF459900A4B734 /* EssentialComponents.cpp */,
+				DD715D7223EF459900A4B734 /* EssentialComponents.hpp */,
+				DD715D7323EF459900A4B734 /* LanguageLibrary.cpp */,
+				DD715D7123EF459900A4B734 /* LanguageLibrary.hpp */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DD715D7523EF459900A4B734 /* TestComponents */ = {
+			isa = PBXGroup;
+			children = (
+				DD715D7823EF459900A4B734 /* Vasya.cpp */,
+				DD715D7723EF459900A4B734 /* Vasya.hpp */,
+				DD715D7A23EF459900A4B734 /* GAME228.hpp */,
+				DD715D7923EF459900A4B734 /* BlurTest.cpp */,
+				DD715D7623EF459900A4B734 /* BlurTest.hpp */,
+			);
+			path = TestComponents;
+			sourceTree = "<group>";
+		};
+		DDB2A25623EF5C2E0050B8D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,27 +381,64 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD715D5123EF453B00A4B734 /* GUI.hpp in Headers */,
+				DD715D5B23EF453B00A4B734 /* Collectors.hpp in Headers */,
+				DD15CD0223F1E85D00CC40C2 /* Client.hpp in Headers */,
 				DD715C8723EEC73900A4B734 /* Settings.hpp in Headers */,
-				DD715C7223EEC65600A4B734 /* EntityComposition.hpp in Headers */,
+				DD715D8723EF459900A4B734 /* EssentialComponents.hpp in Headers */,
+				DD715D5523EF453B00A4B734 /* Language.hpp in Headers */,
+				DD715D8123EF459900A4B734 /* Base.hpp in Headers */,
+				DD715D1823EF44C800A4B734 /* Font.hpp in Headers */,
+				DD715D3223EF44C800A4B734 /* RoundedRectangleButton.hpp in Headers */,
+				DD715D2A23EF44C800A4B734 /* RoundedRectangleShape.hpp in Headers */,
+				DD715D7B23EF459900A4B734 /* ResourcePath.hpp in Headers */,
+				DD715D2623EF44C800A4B734 /* enums.hpp in Headers */,
+				DD715D8523EF459900A4B734 /* LanguageLibrary.hpp in Headers */,
+				DD715D8F23EF459900A4B734 /* Vasya.hpp in Headers */,
+				DD715D5323EF453B00A4B734 /* NovelSomeScript.hpp in Headers */,
+				DD715D8D23EF459900A4B734 /* BlurTest.hpp in Headers */,
+				DD715C7223EEC65600A4B734 /* EntitySystem.hpp in Headers */,
+				DD715D3023EF44C800A4B734 /* TexturedRectangleButton.hpp in Headers */,
+				DD15CCD423F1DD2A00CC40C2 /* minEH.hpp in Headers */,
 				DD715CAC23EECC4100A4B734 /* MessageHolder.hpp in Headers */,
+				DD715D2C23EF44C800A4B734 /* SomeButtons.hpp in Headers */,
 				DD715C6923EEC5BA00A4B734 /* minEH.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DD715C7323EEC69000A4B734 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DD715C8823EEC73900A4B734 /* Settings.hpp in Headers */,
-				DD715C7C23EEC69000A4B734 /* minEH_iOS.h in Headers */,
-				DD715CAD23EECC4100A4B734 /* MessageHolder.hpp in Headers */,
-				DD715C8223EEC6B600A4B734 /* EntityComposition.hpp in Headers */,
+				DD715D4D23EF453B00A4B734 /* Notifications.hpp in Headers */,
+				DD715D5923EF453B00A4B734 /* Initialization.hpp in Headers */,
+				DD715D1423EF44C800A4B734 /* Sound.hpp in Headers */,
+				DD715D9523EF459900A4B734 /* GAME228.hpp in Headers */,
+				DD715D2023EF44C800A4B734 /* Image.hpp in Headers */,
+				DD15CCFC23F1E81600CC40C2 /* TextField.hpp in Headers */,
+				DD715D5723EF453B00A4B734 /* List.hpp in Headers */,
+				DD715D6723EF453B00A4B734 /* NotificationHolder.hpp in Headers */,
+				DD715D3823EF44C800A4B734 /* Button.hpp in Headers */,
+				DD715D1A23EF44C800A4B734 /* etc.hpp in Headers */,
+				DD715D1E23EF44C800A4B734 /* Shader.hpp in Headers */,
+				DD715D6323EF453B00A4B734 /* NovelSystem.hpp in Headers */,
+				DD715D2223EF44C800A4B734 /* Blur.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		DD189A5723F1C93F00D81302 /* minEH.iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD189A6023F1C93F00D81302 /* Build configuration list for PBXNativeTarget "minEH.iOS" */;
+			buildPhases = (
+				DD189A5423F1C93F00D81302 /* Sources */,
+				DD189A5523F1C93F00D81302 /* Frameworks */,
+				DD189A5623F1C93F00D81302 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = minEH.iOS;
+			productName = minEH.iOS.a;
+			productReference = DD189A5823F1C93F00D81302 /* libminEH.iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		DD715C6323EEC5BA00A4B734 /* minEH */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD715C6C23EEC5BA00A4B734 /* Build configuration list for PBXNativeTarget "minEH" */;
@@ -153,24 +458,6 @@
 			productReference = DD715C6423EEC5BA00A4B734 /* minEH.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		DD715C7723EEC69000A4B734 /* minEH.iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DD715C7D23EEC69000A4B734 /* Build configuration list for PBXNativeTarget "minEH.iOS" */;
-			buildPhases = (
-				DD715C7323EEC69000A4B734 /* Headers */,
-				DD715C7423EEC69000A4B734 /* Sources */,
-				DD715C7523EEC69000A4B734 /* Frameworks */,
-				DD715C7623EEC69000A4B734 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = minEH.iOS;
-			productName = minEH.iOS;
-			productReference = DD715C7823EEC69000A4B734 /* minEH_iOS.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -180,10 +467,10 @@
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Melancholy Hill";
 				TargetAttributes = {
-					DD715C6323EEC5BA00A4B734 = {
+					DD189A5723F1C93F00D81302 = {
 						CreatedOnToolsVersion = 11.2;
 					};
-					DD715C7723EEC69000A4B734 = {
+					DD715C6323EEC5BA00A4B734 = {
 						CreatedOnToolsVersion = 11.2;
 					};
 				};
@@ -202,20 +489,13 @@
 			projectRoot = "";
 			targets = (
 				DD715C6323EEC5BA00A4B734 /* minEH */,
-				DD715C7723EEC69000A4B734 /* minEH.iOS */,
+				DD189A5723F1C93F00D81302 /* minEH.iOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		DD715C6223EEC5BA00A4B734 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DD715C7623EEC69000A4B734 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -245,29 +525,111 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DD189A5423F1C93F00D81302 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD189A7C23F1CC7500D81302 /* ResourcePath.mm in Sources */,
+				DD189A6C23F1CA8A00D81302 /* TexturedRectangleButton.cpp in Sources */,
+				DD189A6523F1CA6600D81302 /* Image.cpp in Sources */,
+				DD189A6A23F1CA7500D81302 /* SomeButtons.cpp in Sources */,
+				DD189A6F23F1CA9300D81302 /* NovelSomeScript.cpp in Sources */,
+				DD189A7123F1CA9600D81302 /* MessageHolder.cpp in Sources */,
+				DD189A7023F1CA9500D81302 /* Settings.cpp in Sources */,
+				DD189A7223F1CA9700D81302 /* EntitySystem.cpp in Sources */,
+				DD189A7823F1CAA200D81302 /* EssentialComponents.cpp in Sources */,
+				DD189A7923F1CAA300D81302 /* LanguageLibrary.cpp in Sources */,
+				DD189A7323F1CA9800D81302 /* NovelSystem.cpp in Sources */,
+				DD189A7A23F1CAA400D81302 /* Vasya.cpp in Sources */,
+				DD15CCFB23F1E81600CC40C2 /* TextField.cpp in Sources */,
+				DD189A7423F1CA9A00D81302 /* Initialization.cpp in Sources */,
+				DD189A7B23F1CAA500D81302 /* BlurTest.cpp in Sources */,
+				DD189A6E23F1CA8C00D81302 /* Blur.cpp in Sources */,
+				DD189A7523F1CA9C00D81302 /* Language.cpp in Sources */,
+				DD189A6D23F1CA8B00D81302 /* RoundedRectangleShape.cpp in Sources */,
+				DD189A6B23F1CA8800D81302 /* RoundedRectangleButton.cpp in Sources */,
+				DD189A7723F1CA9E00D81302 /* Notifications.cpp in Sources */,
+				DD189A7623F1CA9D00D81302 /* NotificationHolder.cpp in Sources */,
+				DD189A6623F1CA6800D81302 /* Sound.cpp in Sources */,
+				DD189A6323F1CA6200D81302 /* etc.cpp in Sources */,
+				DD189A6823F1CA6F00D81302 /* Button.cpp in Sources */,
+				DD189A6723F1CA6900D81302 /* Shader.cpp in Sources */,
+				DD189A6423F1CA6500D81302 /* Font.cpp in Sources */,
+				DD15CD0123F1E85D00CC40C2 /* Client.cpp in Sources */,
+				DD189A6223F1CA5D00D81302 /* Base.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DD715C6023EEC5BA00A4B734 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD715D7F23EF459900A4B734 /* ResourcePath.cpp in Sources */,
+				DD715D6123EF453B00A4B734 /* Initialization.cpp in Sources */,
+				DD715D3A23EF44C800A4B734 /* TexturedRectangleButton.cpp in Sources */,
+				DD15CCFA23F1E81600CC40C2 /* TextField.cpp in Sources */,
+				DD715D9323EF459900A4B734 /* BlurTest.cpp in Sources */,
+				DD715D1223EF44C800A4B734 /* etc.cpp in Sources */,
+				DD715D3423EF44C800A4B734 /* RoundedRectangleButton.cpp in Sources */,
+				DD715D8923EF459900A4B734 /* LanguageLibrary.cpp in Sources */,
+				DD715D6523EF453B00A4B734 /* Notifications.cpp in Sources */,
 				DD715C8523EEC73900A4B734 /* Settings.cpp in Sources */,
-				DD715C7123EEC65600A4B734 /* EntityComposition.cpp in Sources */,
+				DD715D7D23EF459900A4B734 /* Base.cpp in Sources */,
+				DD715D8323EF459900A4B734 /* ResourcePath.mm in Sources */,
+				DD715D9123EF459900A4B734 /* Vasya.cpp in Sources */,
+				DD715D2423EF44C800A4B734 /* RoundedRectangleShape.cpp in Sources */,
+				DD715D3623EF44C800A4B734 /* SomeButtons.cpp in Sources */,
+				DD715D0E23EF44C800A4B734 /* Image.cpp in Sources */,
+				DD715D2823EF44C800A4B734 /* Blur.cpp in Sources */,
+				DD715D4B23EF453B00A4B734 /* NovelSomeScript.cpp in Sources */,
+				DD15CD0023F1E85D00CC40C2 /* Client.cpp in Sources */,
+				DD715D1C23EF44C800A4B734 /* Sound.cpp in Sources */,
+				DD715C7123EEC65600A4B734 /* EntitySystem.cpp in Sources */,
+				DD715D1623EF44C800A4B734 /* Shader.cpp in Sources */,
+				DD715D4F23EF453B00A4B734 /* NotificationHolder.cpp in Sources */,
+				DD715D5F23EF453B00A4B734 /* NovelSystem.cpp in Sources */,
 				DD715CAA23EECC4100A4B734 /* MessageHolder.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DD715C7423EEC69000A4B734 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DD715C8623EEC73900A4B734 /* Settings.cpp in Sources */,
-				DD715C8123EEC6AD00A4B734 /* EntityComposition.cpp in Sources */,
-				DD715CAB23EECC4100A4B734 /* MessageHolder.cpp in Sources */,
+				DD715D5D23EF453B00A4B734 /* Language.cpp in Sources */,
+				DD715D2E23EF44C800A4B734 /* Button.cpp in Sources */,
+				DD715D8B23EF459900A4B734 /* EssentialComponents.cpp in Sources */,
+				DD715D1023EF44C800A4B734 /* Font.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		DD189A5E23F1C93F00D81302 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A2VZ8FCF86;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-lstdc++";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DD189A5F23F1C93F00D81302 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A2VZ8FCF86;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-lstdc++";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		DD715C6A23EEC5BA00A4B734 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -280,7 +642,7 @@
 				);
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -311,7 +673,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -329,6 +691,7 @@
 					/Users/mayday/Developer/Libraries/SFML/include/,
 					/usr/local/include/,
 					"$(inherited)",
+					/Users/mayday/Developer/XCode/Framework/minEH,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -339,6 +702,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"$(SFML_SYSTEM)",
@@ -365,7 +729,7 @@
 				);
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -396,7 +760,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -408,6 +772,7 @@
 					/Users/mayday/Developer/Libraries/SFML/include/,
 					/usr/local/include/,
 					"$(inherited)",
+					/Users/mayday/Developer/XCode/Framework/minEH,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -417,6 +782,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"$(SFML_SYSTEM)",
@@ -503,60 +869,18 @@
 			};
 			name = Release;
 		};
-		DD715C7E23EEC69000A4B734 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = A2VZ8FCF86;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = minEH.iOS/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "melancholyhill.minEH-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		DD715C7F23EEC69000A4B734 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = A2VZ8FCF86;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = minEH.iOS/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "melancholyhill.minEH-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DD189A6023F1C93F00D81302 /* Build configuration list for PBXNativeTarget "minEH.iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD189A5E23F1C93F00D81302 /* Debug */,
+				DD189A5F23F1C93F00D81302 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DD715C5E23EEC5BA00A4B734 /* Build configuration list for PBXProject "minEH" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -571,15 +895,6 @@
 			buildConfigurations = (
 				DD715C6D23EEC5BA00A4B734 /* Debug */,
 				DD715C6E23EEC5BA00A4B734 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DD715C7D23EEC69000A4B734 /* Build configuration list for PBXNativeTarget "minEH.iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DD715C7E23EEC69000A4B734 /* Debug */,
-				DD715C7F23EEC69000A4B734 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

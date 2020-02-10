@@ -8,8 +8,4 @@
 
 // In this header, you should import all the public headers of your framework using statements like #import <minEH/PublicHeader.h>
 
-#import <minEH/Engine/MessageHolder.hpp>
-#import <minEH/Engine/EntityComposition.hpp>
-#import <minEH/Engine/Settings.hpp>
-
-
+#import <minEH/minEH.hpp>
