@@ -26,7 +26,7 @@ namespace ns
         {
             if (threads.find(imageName) != threads.end())
             {
-                threads[imageName]->join();
+                threads[imageName]->join(); // TODO: Might "ACCESS VIOLATION" here
                 delete threads[imageName]; threads.erase(imageName);
                 if (images.find(imageName) != images.end() && images[imageName].image != nullptr)
                 {
@@ -38,7 +38,6 @@ namespace ns
             }
             
             std::wstring fullPath = PathWithResolutionDetermination(imageName, mode);
-            
             if (base::FileExists(fullPath))
             {
                 sf::Image* image = new sf::Image();
@@ -96,7 +95,7 @@ namespace ns
             return nullptr;
         }
     }
-    void ImageCollector::ThreadImage(std::wstring imageName, unsigned int mode, bool destroyable, bool loadTexture, std::string message, MessageSender* sender)
+    void ImageCollector::ThreadImage(std::wstring imageName, unsigned int mode, bool destroyable, bool loadTexture, bool countAsUsed, std::string message, MessageSender* sender)
     {
         std::wstring fullPath = PathWithResolutionDetermination(imageName, mode);
         
@@ -150,8 +149,8 @@ namespace ns
             
             if (imageLoaded)
             {
-                images.emplace(imageName, ImageCollectorObject(image, nullptr, 0, destroyable));
-                if (loadTexture) { LoadTexture(imageName); images[imageName].usage = 0; }
+                images.emplace(imageName, ImageCollectorObject(image, nullptr, countAsUsed? 1 : 0, destroyable));
+                if (loadTexture) { LoadTexture(imageName); images[imageName].usage = countAsUsed? 1 : 0; }
                 if (sender && message.length() > 0 && message != "")
                 {
                     //cout << "original quality loaded, sending message" << endl;
@@ -162,7 +161,8 @@ namespace ns
                         std::wstring imageExtention = base::GetExtentionFromString(imageName);
                         std::wstring imageWoExtention = base::GetStringWithNoExtention(imageName);
                         DrawbackImage(imageWoExtention + L"@0x" + imageExtention);
-                    } else if (message == "Requestp")
+                    }
+                    else if (message == "Requestp")
                     {
                         std::wstring imageExtention = base::GetExtentionFromString(imageName);
                         std::wstring imageWoExtention = base::GetStringWithNoExtention(imageName);
@@ -183,7 +183,7 @@ namespace ns
         //cout << "[][][][][][] PRELOADING: " << base::utf8(imageName) << " [][][][][][]" << endl;
         if (images.find(imageName) == images.end())
             if (threads.find(imageName) == threads.end())
-                threads.emplace(imageName, new std::thread(&ThreadImage, imageName, mode, destroyable, false, "", nullptr));
+                threads.emplace(imageName, new std::thread(&ThreadImage, imageName, mode, destroyable, false, false, "", nullptr));
     }
     sf::Texture* ImageCollector::LoadTexture(const std::wstring& imageName, unsigned int mode)
     {
@@ -199,7 +199,7 @@ namespace ns
                 images[imageName].texture = new sf::Texture();
                 
                 sf::Image* imagePtr = images[imageName].image;
-                if (imagePtr->getSize().x > sf::Texture::getMaximumSize() || imagePtr->getSize().y > sf::Texture::getMaximumSize())
+                if (imagePtr && (imagePtr->getSize().x > sf::Texture::getMaximumSize() || imagePtr->getSize().y > sf::Texture::getMaximumSize()))
                     images[imageName].texture->loadFromImage(*imagePtr, sf::IntRect(0, 0, imagePtr->getSize().x > sf::Texture::getMaximumSize() ? sf::Texture::getMaximumSize() : imagePtr->getSize().x, imagePtr->getSize().y > sf::Texture::getMaximumSize() ? sf::Texture::getMaximumSize() : imagePtr->getSize().y));
                 else images[imageName].texture->loadFromImage(*images[imageName].image);
                 if (images[imageName].texture) images[imageName].texture->setSmooth(true);
@@ -208,17 +208,19 @@ namespace ns
         }
         return nullptr;
     }
-    void ImageCollector::PreloadTexture(const std::wstring& imageName, unsigned int mode, bool destroyable, MessageSender* sender)
+    void ImageCollector::PreloadTexture(const std::wstring& imageName, unsigned int mode, bool destroyable, bool countAsUsed, MessageSender* sender)
     {
         if (images.find(imageName) == images.end())
+        {
             if (threads.find(imageName) == threads.end())
-                threads.emplace(imageName, new std::thread(&ThreadImage, imageName, mode, destroyable, true, "RequestP", sender));
+                threads.emplace(imageName, new std::thread(&ThreadImage, imageName, mode, destroyable, true, countAsUsed, "RequestP", sender));
+        } else if (countAsUsed) ++images[imageName].usage;
     }
     sf::Texture* ImageCollector::RequestTexture(const std::wstring& imageName, MessageSender* sender, unsigned int mode)
     {
         if (images.find(imageName) != images.end()) return LoadTexture(imageName, mode);
         else if (threads.find(imageName) == threads.end())
-            threads.emplace(imageName, new std::thread(&ThreadImage, imageName, mode, true, true, "Request", sender));
+            threads.emplace(imageName, new std::thread(&ThreadImage, imageName, mode, true, true, false, "Request", sender));
         return nullptr;
     }
     sf::Texture* ImageCollector::RequestHigherTexture(const std::wstring& imageName, MessageSender* sender, unsigned int mode)
@@ -240,7 +242,7 @@ namespace ns
                     if (threads.find(imageName) == threads.end())
                     {
                         std::string message = "Requestp"; if (prefix == L"@0x") message = "Request0";
-                        threads.emplace(imageName, new std::thread(&ThreadImage, imageName, mode, true, true, message, sender));
+                        threads.emplace(imageName, new std::thread(&ThreadImage, imageName, mode, true, true, false, message, sender));
                     }
                     else --images[imageWoExtention + prefix + imageExtention].usage;
                     return LoadTexture(imageWoExtention + prefix + imageExtention, mode);
@@ -253,7 +255,7 @@ namespace ns
                     if (threads.find(imageName) == threads.end())
                     {
                         std::string message = "Requestp"; if (prefix == L"@0x") message = "Request0";
-                        threads.emplace(imageName, new std::thread(&ThreadImage, imageName, mode, true, true, message, sender));
+                        threads.emplace(imageName, new std::thread(&ThreadImage, imageName, mode, true, true, false, message, sender));
                     }
                     else --images[imageWoExtention + prefix + imageExtention].usage;
                     return texture;

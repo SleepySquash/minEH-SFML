@@ -81,7 +81,7 @@ namespace ns
                 
                 std::wstring onlyFolder = base::GetFolderPath(fullPath);
                 std::wstring onlyFileName = L"";
-                for (int i = onlyFolder.length(); i < fullPath.length(); i++)
+                for (unsigned long i = onlyFolder.length(); i < fullPath.length(); i++)
                     onlyFileName += fullPath[i];
                 
                 if (base::FileExists(onlyFolder + L"music/" + onlyFileName)) fullPath = onlyFolder + L"music/" + onlyFileName;

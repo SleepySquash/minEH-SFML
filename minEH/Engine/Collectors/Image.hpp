@@ -61,10 +61,10 @@ namespace ns
         static icThreadsJoiner threadsJoiner;
         
         static sf::Image* LoadImage(const std::wstring& imageName, unsigned int mode = 2);
-        static void ThreadImage(std::wstring imageName, unsigned int mode, bool destroyable = true, bool loadTexture = false, std::string message = "", MessageSender* sender = nullptr);
+        static void ThreadImage(std::wstring imageName, unsigned int mode, bool destroyable = true, bool loadTexture = false, bool countAsUsed = false, std::string message = "", MessageSender* sender = nullptr);
         static void PreloadImage(const std::wstring& imageName, unsigned int mode = 2, bool destroyable = true);
         static sf::Texture* LoadTexture(const std::wstring& imageName, unsigned int mode = 2);
-        static void PreloadTexture(const std::wstring& imageName, unsigned int mode = 2, bool destroyable = true, MessageSender* sender = nullptr);
+        static void PreloadTexture(const std::wstring& imageName, unsigned int mode = 2, bool destroyable = true, bool countAsUsed = false, MessageSender* sender = nullptr);
         
         static sf::Texture* RequestTexture(const std::wstring& imageName, MessageSender* sender, unsigned int mode = 2);
         static sf::Texture* RequestHigherTexture(const std::wstring& imageName, MessageSender* sender, unsigned int mode = 2);
@@ -79,7 +79,7 @@ namespace ns
         static void FreeImages();
     };
     struct icThreadsJoiner { ~icThreadsJoiner() { for (auto& t : ImageCollector::threads) t.second->join(); ImageCollector::threads.clear(); } };
-
+    
     typedef ImageCollector ic;
 }
 

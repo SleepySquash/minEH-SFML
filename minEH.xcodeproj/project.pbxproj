@@ -14,6 +14,7 @@
 		DD15CD0023F1E85D00CC40C2 /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD15CCFE23F1E85D00CC40C2 /* Client.cpp */; };
 		DD15CD0123F1E85D00CC40C2 /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD15CCFE23F1E85D00CC40C2 /* Client.cpp */; };
 		DD15CD0223F1E85D00CC40C2 /* Client.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DD15CCFF23F1E85D00CC40C2 /* Client.hpp */; };
+		DD15CD1123F1FDCF00CC40C2 /* ResourcePath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D6C23EF459800A4B734 /* ResourcePath.cpp */; };
 		DD189A6223F1CA5D00D81302 /* Base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715D6B23EF459800A4B734 /* Base.cpp */; };
 		DD189A6323F1CA6200D81302 /* etc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715CF723EF44C800A4B734 /* etc.cpp */; };
 		DD189A6423F1CA6500D81302 /* Font.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD715CF623EF44C800A4B734 /* Font.cpp */; };
@@ -543,6 +544,7 @@
 				DD189A7A23F1CAA400D81302 /* Vasya.cpp in Sources */,
 				DD15CCFB23F1E81600CC40C2 /* TextField.cpp in Sources */,
 				DD189A7423F1CA9A00D81302 /* Initialization.cpp in Sources */,
+				DD15CD1123F1FDCF00CC40C2 /* ResourcePath.cpp in Sources */,
 				DD189A7B23F1CAA500D81302 /* BlurTest.cpp in Sources */,
 				DD189A6E23F1CA8C00D81302 /* Blur.cpp in Sources */,
 				DD189A7523F1CA9C00D81302 /* Language.cpp in Sources */,

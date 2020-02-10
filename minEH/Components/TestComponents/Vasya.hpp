@@ -12,7 +12,6 @@
 #include <iostream>
 
 #include <SFML/Graphics.hpp>
-
 #include "../../Engine/Collectors.hpp"
 
 struct Vasya
