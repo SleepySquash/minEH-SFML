@@ -32,14 +32,28 @@ using std::endl;
 
 namespace ns
 {
+    struct FontCollectorObject
+    {
+        sf::Font* font{ nullptr };
+        int usage{ 0 };
+        bool destroyable{ true };
+        
+        FontCollectorObject(sf::Font* font = nullptr, int usage = 0, bool destroyable = true);
+    };
     class FontCollector
     {
     private:
         FontCollector() { }
         
     public:
-        static std::unordered_map<std::wstring, sf::Font*> fonts;
-        static sf::Font* GetFont(const std::wstring& fontName);
+        static std::unordered_map<std::wstring, FontCollectorObject> fonts;
+        
+        static sf::Font* GetFont(const std::wstring& fontName); /// TODO: obsolete, will not load the font in the future
+                                                                /// TODO: !!! Use instead LoadFont() and DeleteFont()
+        
+        static sf::Font* LoadFont(const std::wstring& fontName);
+        static void DeleteFont(const std::wstring& fontName);
+        static bool FontExistsAtPath(const std::wstring& fontName);
         static void FreeFonts();
     };
     
