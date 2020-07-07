@@ -151,7 +151,7 @@ void SetResolutionClass()
             int version = base::ConvertToInt(nss::ParseUntil(device, ',', 4));
             if (version <= 1) gs::resolutionClass = 0;
             else if (version <= 2) gs::resolutionClass = 1;
-            if (version == 8) gs::framerateLimit = 120;
+            if (version == 8) { gs::framerateLimit = 120; gs::isVerticalSyncEnabled = false; }
         }
         else if (nss::Command(device, "iPod"))
         {
