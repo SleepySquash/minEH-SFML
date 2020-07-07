@@ -28,6 +28,7 @@
 #include "../Essentials/Base.hpp"
 #include "NovelSomeScript.hpp"
 
+using std::cin;
 using std::cout;
 using std::endl;
 using std::pair;
@@ -51,9 +52,11 @@ namespace ns
         static unsigned int relativeWidth, relativeHeight;
         static bool verticalOrientation, trueVerticalOrientation;
         static int notchEffectFromTop, screenOffsetTop;
+        static float scaleUI;
         static bool fullscreen;
         
         static float deltaVelocity;
+        static float fixedUpdate;
         
         static std::pair<int, int> lastMousePos;
         static int windowPositionOffset;

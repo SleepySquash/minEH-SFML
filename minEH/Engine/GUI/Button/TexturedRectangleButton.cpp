@@ -29,22 +29,22 @@ namespace ns
                 if (index == pressedIndex)
                 {
                     if (anyButtonPressed) {
-                        if (drawOutlineShape) shape.setOutlineColor({sopressColor.r, sopressColor.g, sopressColor.b, ralpha});
-                        if (drawOutline) text.setOutlineColor({opressColor.r, opressColor.g, opressColor.b, alpha});
-                        shape.setFillColor({spressColor.r, spressColor.g, spressColor.b, ralpha});
-                        text.setFillColor({pressColor.r, pressColor.g, pressColor.b, alpha}); }
+                        if (drawOutlineShape) shape.setOutlineColor({sopressColor.r, sopressColor.g, sopressColor.b, shape.getOutlineColor().a});
+                        if (drawOutline) text.setOutlineColor({opressColor.r, opressColor.g, opressColor.b, text.getOutlineColor().a});
+                        shape.setFillColor({spressColor.r, spressColor.g, spressColor.b, shape.getFillColor().a});
+                        text.setFillColor({pressColor.r, pressColor.g, pressColor.b, text.getFillColor().a}); }
                     else if (wasHovered) {
-                        text.setFillColor(sf::Color(hoverColor.r, hoverColor.g, hoverColor.b, alpha));
-                        shape.setFillColor(sf::Color(shoverColor.r, shoverColor.g, shoverColor.b, ralpha));
-                        if (drawOutline) text.setOutlineColor(sf::Color(ohoverColor.r, ohoverColor.g, ohoverColor.b, ralpha));
-                        if (drawOutlineShape) shape.setFillColor(sf::Color(shoverColor.r, shoverColor.g, shoverColor.b, ralpha)); }
+                        text.setFillColor(sf::Color(hoverColor.r, hoverColor.g, hoverColor.b, text.getFillColor().a));
+                        shape.setFillColor(sf::Color(shoverColor.r, shoverColor.g, shoverColor.b, shape.getFillColor().a));
+                        if (drawOutline) text.setOutlineColor(sf::Color(ohoverColor.r, ohoverColor.g, ohoverColor.b, text.getOutlineColor().a));
+                        if (drawOutlineShape) shape.setFillColor(sf::Color(shoverColor.r, shoverColor.g, shoverColor.b, shape.getOutlineColor().a)); }
                 }
                 if (drawShape) target->draw(shape, states); target->draw(text, states);
                 if ((anyButtonPressed || wasHovered) && index == pressedIndex) {
-                    if (drawOutlineShape) shape.setOutlineColor({sonormalColor.r, sonormalColor.g, sonormalColor.b, ralpha});
-                    if (drawOutline) text.setOutlineColor({onormalColor.r, onormalColor.g, onormalColor.b, alpha});
-                    shape.setFillColor({snormalColor.r, snormalColor.g, snormalColor.b, ralpha});
-                    text.setFillColor({normalColor.r, normalColor.g, normalColor.b, alpha}); }
+                    if (drawOutlineShape) shape.setOutlineColor({sonormalColor.r, sonormalColor.g, sonormalColor.b, shape.getOutlineColor().a});
+                    if (drawOutline) text.setOutlineColor({onormalColor.r, onormalColor.g, onormalColor.b, text.getOutlineColor().a});
+                    shape.setFillColor({snormalColor.r, snormalColor.g, snormalColor.b, shape.getFillColor().a});
+                    text.setFillColor({normalColor.r, normalColor.g, normalColor.b, shape.getFillColor().a}); }
                 text.setScale(1, 1);
             }
         }
@@ -71,10 +71,10 @@ namespace ns
                 
                 if (pressedIndex == index && (anyButtonPressed || ignoreWasPressed))
                 {
-                    if (drawOutlineShape) shape.setOutlineColor({sonormalColor.r, sonormalColor.g, sonormalColor.b, ralpha});
-                    if (drawOutline) text.setOutlineColor({onormalColor.r, onormalColor.g, onormalColor.b, alpha});
-                    text.setFillColor({normalColor.r, normalColor.g, normalColor.b, alpha});
-                    shape.setFillColor({snormalColor.r, snormalColor.g, snormalColor.b, ralpha});
+                    if (drawOutlineShape) shape.setOutlineColor({sonormalColor.r, sonormalColor.g, sonormalColor.b, shape.getOutlineColor().a});
+                    if (drawOutline) text.setOutlineColor({onormalColor.r, onormalColor.g, onormalColor.b, text.getOutlineColor().a});
+                    text.setFillColor({normalColor.r, normalColor.g, normalColor.b, text.getFillColor().a});
+                    shape.setFillColor({snormalColor.r, snormalColor.g, snormalColor.b, shape.getFillColor().a});
                     bool constains = shape.getGlobalBounds().contains(dot.x, dot.y);
                     if (constains) { anyButtonPressed = false; event = sf::Event(); }
                     

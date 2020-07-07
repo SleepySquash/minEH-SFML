@@ -108,9 +108,11 @@ namespace ns
     float gs::scalex = 1.f, gs::scaley = 1.f;
     bool gs::verticalOrientation = false, gs::trueVerticalOrientation = false;
     int gs::screenOffsetTop{ 0 }, gs::notchEffectFromTop{ 0 };
+    float gs::scaleUI{ 1.f };
     bool gs::fullscreen{ false };
     
     float gs::deltaVelocity = 1.f;
+    float gs::fixedUpdate = 1.f;
     
     std::pair<int, int> gs::lastMousePos = { 0, 0 };
 #ifdef _WIN32

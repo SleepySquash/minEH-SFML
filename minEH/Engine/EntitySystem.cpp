@@ -13,6 +13,7 @@ namespace ns
     Component::~Component() { }
     void Component::Init() { }
     void Component::Update(const sf::Time&) { }
+    void Component::FixedUpdate(const unsigned int&) { }
     void Component::Draw(sf::RenderWindow*) { }
     void Component::Resize(const unsigned int&, const unsigned int&) { }
     void Component::PollEvent(sf::Event&) { }
@@ -34,6 +35,12 @@ namespace ns
             if ((*it)->offline) { if ((*it)->sleep) (*it)->sleep = (*it)->offline = false; else { delete (*it); it = components.erase(it); } }
             else { (*it)->Update(elapsedTime); ++it; }
         }
+    }
+    void Entity::FixedUpdate(const unsigned int& elapsedTime)
+    {
+        if (components.size())
+        for (auto c : components)
+            if (!c->offline) c->FixedUpdate(elapsedTime);
     }
     void Entity::Draw(sf::RenderWindow* window)
     {
@@ -105,6 +112,12 @@ namespace ns
             if ((*it)->offline) { delete (*it); it = entities.erase(it); }
             else { (*it)->Update(elapsedTime); ++it; }
         }
+    }
+    void EntitySystem::FixedUpdate(const unsigned int& elapsedTime)
+    {
+        if (entities.size())
+        for (auto e : entities)
+            if (!e->offline) e->FixedUpdate(elapsedTime);
     }
     void EntitySystem::Draw(sf::RenderWindow* window)
     {

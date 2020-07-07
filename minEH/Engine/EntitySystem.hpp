@@ -36,6 +36,7 @@ namespace ns
         virtual ~Component();
         virtual void Init();
         virtual void Update(const sf::Time&);
+        virtual void FixedUpdate(const unsigned int&);
         virtual void Draw(sf::RenderWindow*);
         virtual void Resize(const unsigned int& width, const unsigned int& height);
         virtual void PollEvent(sf::Event& event);
@@ -56,6 +57,7 @@ namespace ns
         Entity();
         Entity(EntitySystem* system);
         void Update(const sf::Time& elapsedTime);
+        void FixedUpdate(const unsigned int& elapsedTime);
         void Draw(sf::RenderWindow* window);
         void Resize(const unsigned int& width, const unsigned int& height);
         void PollEvent(sf::Event& event);
@@ -116,6 +118,7 @@ namespace ns
         
         EntitySystem();
         void Update(const sf::Time& elapsedTime);
+        void FixedUpdate(const unsigned int& elapsedTime);
         void Draw(sf::RenderWindow* window);
         void Resize(const unsigned int& width, const unsigned int& height);
         void PollEvent(sf::Event& event);

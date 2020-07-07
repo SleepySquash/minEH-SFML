@@ -147,6 +147,7 @@ void SetResolutionClass()
         }
         else if (nss::Command(device, "iPad"))
         {
+            gs::scaleUI = 0.6f;
             int version = base::ConvertToInt(nss::ParseUntil(device, ',', 4));
             if (version <= 1) gs::resolutionClass = 0;
             else if (version <= 2) gs::resolutionClass = 1;
@@ -158,8 +159,10 @@ void SetResolutionClass()
             else if (version <= 4) gs::resolutionClass = 1;
             else if (version <= 6) gs::resolutionClass = 1;
         }
+#elif defined(SFML_SYSTEM_ANDROID)
+#else
+        gs::scaleUI = 0.6f;
 #endif
-        
         cout << "main :: GlobalSettings :: Autocomputed ResolutionClass is " << gs::resolutionClass << "@x." << endl;
     }
     else
